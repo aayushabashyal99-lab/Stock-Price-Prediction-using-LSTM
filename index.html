@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stock Price Prediction using Stacked LSTM</title>
+</head>
+<body>
+  <h1>Stock Price Prediction using Stacked LSTM</h1>
+  <form method="POST">
+    <label for="symbol">Enter Stock Ticker Symbol:</label>
+    <input type="text" id="symbol" name="symbol" required />
+    <button type="submit">Predict</button>
+  </form>
+
+  {% if predicted %}
+    <h2>Predicted Next Closing Price: {{ predicted }}</h2>
+  {% endif %}
+  
+  {% if error %}
+    <h3 style="color:red;">{{ error }}</h3>
+  {% endif %}
+</body>
+</html>
